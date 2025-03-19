@@ -17,6 +17,15 @@ int max_local (int a, int b){
         return b;
 }
 
+//Function Overloading
+void Print(int i){
+    std::cout << i <<endl;
+}
+
+void Print(string s){
+    std::cout << s << endl;
+}
+
 int main(){
 
      printHello();
@@ -32,6 +41,11 @@ int main(){
     
     int res = max_local(a,b);
     std::cout << "Maximum of " << a <<" and "<<b <<" is "<< res<< std::endl;
-   
+
+    //Function Overloading
+    Print(10);
+    Print("Hello World");
+    return 0;
+    
     return 0;
 }
