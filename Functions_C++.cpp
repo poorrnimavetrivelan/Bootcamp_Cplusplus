@@ -10,6 +10,13 @@ int add(int a,int b){
     return (a+b);
 }
 
+int max_local (int a, int b){
+    if (a>b)
+        return a;
+    else 
+        return b;
+}
+
 int main(){
 
      printHello();
@@ -19,7 +26,12 @@ int main(){
     std::cin >> a;
     std::cout << "Enter B \n";
     std::cin >> b;
-    int res =add(a,b);
+    
+    int res = add(a,b);
     std::cout << "Addition of " << a <<" and "<<b <<" is "<< res<< std::endl;
+    
+    int res = max_local(a,b);
+    std::cout << "Maximum of " << a <<" and "<<b <<" is "<< res<< std::endl;
+   
     return 0;
 }
