@@ -1,5 +1,6 @@
 #include <iostream>
-using namespace std
+using namespace std;
+
 int main(){
   //Unary - ++, --
   int a=10,b,c;
@@ -21,4 +22,6 @@ int main(){
   // <==
   // ==
   // !=
+
+  return 0;
 }
