@@ -37,7 +37,11 @@ int main(){
   b = a - b;
   a = a - b;
   std::cout << "A " << a << " B " << b << std::endl;
+    
   std::cout << a << std::endl << &a << std::endl << *(&a) << std::endl;
+
+  int *ptr = &a;
+  std::cout << ptr << "\n" << *ptr << "\n" << &ptr << "\n" << a << "\n" << &a;
   
   return 0;
 }
