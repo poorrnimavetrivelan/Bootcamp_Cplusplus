@@ -19,6 +19,7 @@ void swappointer(int *a, int *b){
     *a=*b;
     *b=temp;
     std::cout << "Inside Loop : A " << *a << " B " << *b << std::endl;
+    // * gives value at particular address
 }
 
 int main(){
