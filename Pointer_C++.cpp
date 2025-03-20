@@ -26,3 +26,19 @@ int main(){
     
 }
 
+//Function Pointer
+#include <iostream>
+using namespace std;
+
+int add (int a, int b){
+    return (a+b);
+}
+
+int main(){
+    int result;
+    int (*ptr)(int, int)=&add;
+    result = ptr (20,30);
+    std::cout << "Result is " << result << std::endl;
+    return 0;
+}
+
