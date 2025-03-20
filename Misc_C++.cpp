@@ -22,6 +22,27 @@ void swappointer(int *a, int *b){
     // * gives value at particular address
 }
 
+class complex{
+    private:
+        int real;
+        int imag;
+    public:
+        void print(){
+            std::cout << real << "+" << imag <<"i" << std::endl;
+        }
+        complex(int r, int i){
+            real = r;
+            imag = i;
+        }
+};
+
+
+int main(){
+    complex c1(10,5);
+    c1.print();
+    return 0;
+}
+
 int main(){
   int a=4, b=6;
   
@@ -42,6 +63,10 @@ int main(){
 
   int *ptr = &a;
   std::cout << ptr << "\n" << *ptr << "\n" << &ptr << "\n" << a << "\n" << &a;
+
+  complex c1(10,5);
+    c1.print();
+    return 0;
   
   return 0;
 }
