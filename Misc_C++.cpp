@@ -66,6 +66,8 @@ int main(){
 
   complex c1(10,5);
     c1.print();
+    complex *c2 = new complex(5,10);
+    c2 -> print();
     return 0;
   
   return 0;
