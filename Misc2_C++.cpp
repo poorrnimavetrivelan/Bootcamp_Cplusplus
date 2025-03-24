@@ -29,3 +29,31 @@ int main(){
     n3.display();
     return 0;
 }
+
+#include <iostream>
+using namespace std;
+
+struct point{
+    int a, b;
+};
+int main(){
+    point p;
+    p.a=5;
+    p.b=10;
+    std::cout<<p.a;
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+typedef struct point{
+    int a, b;
+}P;
+int main(){
+    P p;
+    p.a=5;
+    p.b=10;
+    std::cout<<p.a;
+    return 0;
+}
