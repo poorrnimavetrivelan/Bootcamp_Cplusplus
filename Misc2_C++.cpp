@@ -57,3 +57,64 @@ int main(){
     std::cout<<p.a;
     return 0;
 }
+
+#include <iostream>
+using namespace std;
+
+class Employee{
+    int id;
+    static int count;
+    public:
+        void setData(void){
+            std::cout << "Enter ID"<< std::endl;
+            std::cin >> id;
+            count++;
+        }
+        void getData(void){
+            std:cout <<"Emplyee ID " <<id << "Total Count " << count<<std::endl;
+            
+        }
+};
+//count is status data member of Class
+int Employee::count; //Default is 0
+
+
+int main(){
+    Employee John, Peter;
+    John.setData();
+    John.getData();
+    Peter.setData();
+    Peter.getData();
+    
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+class Employee;
+
+class Printer{
+    public:
+        void printEmp(const Employee &e);
+};
+
+class Employee{
+    private:
+        int id;
+        string name;
+    public:
+        friend void Printer :: printEmp(const Employee &e);
+        Employee(int i, string n):id(i),name(n){}
+};
+
+void Printer :: printEmp(const Employee &e){
+  std::cout << e.id<< " " << e.name << std::endl;  
+};
+
+int main(){
+    Printer p;
+    Employee e(101,"Abc");
+    p.printEmp(e);
+    return 0;
+}
